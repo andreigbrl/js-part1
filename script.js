@@ -48,7 +48,7 @@ function game() {
     let computerScore = 0;
     for (let i = 0; i < 5; i++) {
         let roundResult = playRound();
-        console.log(roundResult);
+        console.log(`Round ${i+1}: ${roundResult}`);
         resultSlice = roundResult.slice(0, 8);
         if (resultSlice === "You Won!") {
             playerScore++;
