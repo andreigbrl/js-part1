@@ -10,21 +10,16 @@ function computerPlay() {
 function userPlay() {
     do {
         playerInput = prompt("Rock, paper or scissors?");
-        if (playerInput === null) {
-            alert("Cancelled");
-        } else {
-            playerSelection = playerInput.toLowerCase();
-            if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
-                alert("That is not rock, paper or scissors. Please try again");
-            };
+        playerSelection = playerInput.toLowerCase();
+        if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
+            alert("That is not rock, paper or scissors. Please try again");
         };
-    }
+        }
     while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors");
 return playerSelection;
 };
 function playRound(playerSelection, computerSelection) {
-
-    if (playerSelection === computerSelection) {
+if (playerSelection === computerSelection) {
         return "Tie";
     };
     switch(playerSelection) {
